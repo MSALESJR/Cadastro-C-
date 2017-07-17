@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.gpbInformacoesCliente = new System.Windows.Forms.GroupBox();
+            this.lblTotalClientes = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblTotalClientes = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gpbInformacoesCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbInformacoesCliente
@@ -53,6 +55,14 @@
             this.gpbInformacoesCliente.TabIndex = 0;
             this.gpbInformacoesCliente.TabStop = false;
             this.gpbInformacoesCliente.Text = "Informações do Cliente";
+            // 
+            // lblTotalClientes
+            // 
+            this.lblTotalClientes.AutoSize = true;
+            this.lblTotalClientes.Location = new System.Drawing.Point(10, 71);
+            this.lblTotalClientes.Name = "lblTotalClientes";
+            this.lblTotalClientes.Size = new System.Drawing.Size(0, 13);
+            this.lblTotalClientes.TabIndex = 6;
             // 
             // btnAdicionar
             // 
@@ -96,24 +106,26 @@
             this.txtCodigo.Size = new System.Drawing.Size(129, 20);
             this.txtCodigo.TabIndex = 0;
             // 
-            // lblTotalClientes
+            // dataGridView1
             // 
-            this.lblTotalClientes.AutoSize = true;
-            this.lblTotalClientes.Location = new System.Drawing.Point(10, 71);
-            this.lblTotalClientes.Name = "lblTotalClientes";
-            this.lblTotalClientes.Size = new System.Drawing.Size(0, 13);
-            this.lblTotalClientes.TabIndex = 6;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 117);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(449, 182);
+            this.dataGridView1.TabIndex = 1;
             // 
             // frmCadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 311);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gpbInformacoesCliente);
             this.Name = "frmCadastroClientes";
             this.Text = "Cadastro de Clientes";
             this.gpbInformacoesCliente.ResumeLayout(false);
             this.gpbInformacoesCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -128,6 +140,7 @@
         private System.Windows.Forms.TextBox txtCodigo;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblTotalClientes;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

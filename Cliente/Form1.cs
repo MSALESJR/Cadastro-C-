@@ -31,6 +31,9 @@ namespace Cliente
         private void AtualizarLabelTotalClientes()
         {
             lblTotalClientes.Text = "Total de Clientes : " + this.clientes.Count();
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = this.clientes.All();
+            dataGridView1.Refresh();
         }
     }
 }

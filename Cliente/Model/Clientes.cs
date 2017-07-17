@@ -24,5 +24,9 @@ namespace Cliente.Model
         {
             return this.Clientes.Count;
         }
+
+        public List<Cliente.Entity.Cliente> All() {
+            return this.Clientes;
+        }
     }
 }
