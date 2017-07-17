@@ -1,25 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cliente
 {
-    public partial class Form1 : Form
+    public partial class frmCadastroClientes : Form
     {
-        public Form1()
+        private Cliente.Model.ClientesDao clientes { get; set; }
+
+        public frmCadastroClientes()
         {
             InitializeComponent();
+            this.clientes = new Cliente.Model.ClientesDao();
+            AtualizarLabelTotalClientes();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var codigo = int.Parse(txtCodigo.Text);
+            var nome = txtNome.Text;
 
+            var cliente = new Cliente.Entity.Cliente() {
+                Codigo = codigo,
+                Nome = nome    
+            };
+
+            this.clientes.Add(cliente);
+            AtualizarLabelTotalClientes();
+        }
+
+        private void AtualizarLabelTotalClientes()
+        {
+            lblTotalClientes.Text = "Total de Clientes : " + this.clientes.Count();
         }
     }
 }
